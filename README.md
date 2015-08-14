@@ -1,6 +1,6 @@
 # FeedbackRouter
 
-TODO: Write a gem description
+A Gem designed to route all of the Feedback from all of your Rails Apps to one convenient location for you to easily view and integrate.
 
 ## Installation
 
