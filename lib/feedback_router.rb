@@ -21,7 +21,7 @@ module FeedbackRouter
 
   def self.send_request
     conn = Faraday.new(:url => @base_url)
-    puts "Sending #{@params} to #{@base_url}#{controller_route}"
+    puts "Sending #{@params} to #{@base_url}#{@controller_route}"
     conn.post @controller_route, @params
   end
 end
