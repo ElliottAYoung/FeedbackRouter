@@ -9,8 +9,8 @@ module FeedbackRouter
 
   private
 
-  def set_up_destination(url)
-    matches = url.match(/(https?:\/\/[\w._:-]+)(.*)/)
+  def set_up_destination
+    matches = ENV['FEEDBACK_LOCATION'].match(/(https?:\/\/[\w._:-]+)(.*)/)
     base_url = matches[1], controller_route = matches[2]
   end
 
