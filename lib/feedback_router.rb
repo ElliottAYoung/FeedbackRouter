@@ -14,7 +14,7 @@ module FeedbackRouter
     base_url = matches[1], controller_route = matches[2]
   end
 
-  def self.set_params
+  def self.set_params(feedback_params, application_name)
     feedback_params['app_name'] = application_name
   end
 
