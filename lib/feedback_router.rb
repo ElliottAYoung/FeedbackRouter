@@ -9,16 +9,16 @@ module FeedbackRouter
 
   private
 
-  def set_up_destination
+  def self.set_up_destination
     matches = ENV['FEEDBACK_LOCATION'].match(/(https?:\/\/[\w._:-]+)(.*)/)
     base_url = matches[1], controller_route = matches[2]
   end
 
-  def set_params
+  def self.set_params
     feedback_params['app_name'] = application_name
   end
 
-  def send_request
+  def self.send_request
     conn = Faraday.new(:url => @base_url)
     conn.post @controller_route, @params
   end
