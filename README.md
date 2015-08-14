@@ -18,13 +18,13 @@ Or install it yourself as:
 
 Once the Gem is installed you have to create an environment of the location that the feedback will be sent to. The environment variable must be called ```ENV['FEEDBACK_LOCATION']``` and should reflect the entire URL of where the data is being sent (for example ```http://localhost:3000/example_route```).
 
-#Usage
-
-After installing the gem, paste the following bit of code into your application_controller.rb:
+Now in whatever app you want your feedback sent to, add the following line to your application_controller.rb file:
 
     protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
     
 This will allow the feedback_router gem to send data through to your create method.
+
+#Usage
 
 Now all you have to do is call the gem after the feedback params have been given, like so:
 
