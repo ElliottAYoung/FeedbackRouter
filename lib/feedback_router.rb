@@ -1,4 +1,5 @@
 require "feedback_router/version"
+require 'faraday'
 
 module FeedbackRouter
   def self.send(feedback_params, application_name)
