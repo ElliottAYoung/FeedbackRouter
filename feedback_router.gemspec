@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = FeedbackRouter::VERSION
   spec.authors       = ["Elliott Young"]
   spec.email         = ["elliott.a.young@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "A Gem that allows you to funel all of your Feedback into one Convenient Location."
+  spec.description   = "A Gem that allows you to funel all of your Feedback into one Convenient Location for you to review and integrate."
+  spec.homepage      = "https://github.com/ElliottAYoung/FeedbackRouter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "faraday"
 end
