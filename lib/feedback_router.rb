@@ -14,6 +14,6 @@ module FeedbackRouter
   end
 
   def send_request
-    
+    Faraday.post @destination, @params
   end
 end
