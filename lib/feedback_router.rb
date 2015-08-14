@@ -17,6 +17,7 @@ module FeedbackRouter
 
   def self.set_params(feedback_params, application_name)
     feedback_params['app_name'] = application_name
+    feedback_params
   end
 
   def self.send_request
