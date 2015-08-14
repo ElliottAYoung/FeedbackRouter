@@ -4,7 +4,7 @@ require 'faraday'
 module FeedbackRouter
   def self.send(feedback_params, application_name)
     @base_url, @controller_route = set_up_destination
-    @params      = set_params(feedback_params, application_name)
+    @params = set_params(feedback_params, application_name)
     send_request
   end
 
@@ -21,6 +21,7 @@ module FeedbackRouter
 
   def self.send_request
     conn = Faraday.new(:url => @base_url)
+    puts "Sending #{@params} to #{@base_url}#{controller_route}"
     conn.post @controller_route, @params
   end
 end
